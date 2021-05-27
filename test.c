@@ -18,9 +18,9 @@
 //--------------------
 //プロトタイプ宣言
 void gpio_setup();              //GPIO設定
-void motor_stop(int, int)       //停止
-void motor_brake(int , int)     //ブレーキ
-void motor_move(int, int, int)  //回転
+void motor_stop(int, int);      //停止
+void motor_brake(int , int);    //ブレーキ
+void motor_move(int, int, int); //回転
 //--------------------
 int main()
 {
@@ -39,8 +39,7 @@ int main()
   //入力テスト
   while(1)
   {
-    printf("LINE_1 %d \n", gpioRead(LINE_1));
-    printf("LINE_2 %d \n\n", gpioRead(LINE_2));
+    printf("LINE INPUT %d %d \n", gpioRead(LINE_1), gpioRead(LINE_2));
   }
 
 /*
